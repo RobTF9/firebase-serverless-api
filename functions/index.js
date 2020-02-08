@@ -14,8 +14,7 @@ const {
   logIn,
   uploadProfileImage,
   addUserDetails,
-  getUserDetails,
-  getAnyUserDetails
+  getUserDetails
 } = require("./routes/users");
 const FBAuth = require("./utils/fbAuth");
 
@@ -37,7 +36,6 @@ app.post("/login", logIn);
 app.post("/user/image", FBAuth, uploadProfileImage);
 app.post("/user", FBAuth, addUserDetails);
 app.get("/user", FBAuth, getUserDetails);
-app.get("/users/:username", getAnyUserDetails);
 
 // Export express router on /api
 exports.api = functions.region("europe-west1").https.onRequest(app);

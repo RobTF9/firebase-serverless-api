@@ -117,14 +117,14 @@ exports.addUserDetails = (request, response) => {
 
 exports.getUserDetails = (request, response) => {
   let userData = {};
-  db.doc(`/users/${request.params.username}`)
+  db.doc(`/users/${request.user.username}`)
     .get()
     .then(doc => {
       if (doc.exists) {
         userData.credentials = doc.data();
         return db
           .collection("likes")
-          .where("username", "==", request.params.username)
+          .where("username", "==", request.user.username)
           .get();
       }
     })
@@ -135,7 +135,7 @@ exports.getUserDetails = (request, response) => {
       });
       return db
         .collection("notifications")
-        .where("recipient", "==", request.params.username)
+        .where("recipient", "==", request.user.username)
         .orderBy("createdAt", "desc")
         .limit(10)
         .get();
@@ -223,42 +223,4 @@ exports.uploadProfileImage = (request, response) => {
       });
   });
   busboy.end(request.rawBody);
-};
-
-exports.getAnyUserDetails = (request, response) => {
-  let userData = {};
-  db.doc(`/users/${request.params.username}`)
-    .get()
-    .then(doc => {
-      if (doc.exists) {
-        userData.user = doc.data();
-        return db
-          .collection("workouts")
-          .where("username", "==", request.params.username)
-          .orderBy("createdAt", "desc")
-          .get();
-      } else {
-        return response.status(404).json({ errror: "User not found" });
-      }
-    })
-    .then(data => {
-      userData.workouts = [];
-      data.forEach(doc => {
-        userData.workouts.push({
-          title: doc.data().title,
-          slug: doc.data().slug,
-          createdAt: doc.data().createdAt,
-          username: doc.data().username,
-          userImage: doc.data().userImage,
-          likes: doc.data().likes,
-          comments: doc.data().comments,
-          workoutId: doc.id
-        });
-      });
-      return response.json(userData);
-    })
-    .catch(error => {
-      console.error(error);
-      return response.status(500).json({ error: error.code });
-    });
 };
