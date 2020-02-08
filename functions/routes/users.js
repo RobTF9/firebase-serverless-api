@@ -1,6 +1,7 @@
 const firebase = require("firebase");
 const firebaseConfig = require("../utils/config");
 const { admin, db } = require("../utils/admin");
+const { USERS_ROUTE, NOTIFICATIONS_COLLECTION } = require("./constants");
 const { reduceUserDetails } = require("../utils/helpers");
 const {
   validateLoginDetails,
@@ -26,7 +27,7 @@ exports.signUp = (request, response) => {
   // Intialize token and id
   let userToken, userId;
 
-  db.doc(`/users/${newUser.username}`)
+  db.doc(`${USERS_ROUTE}/${newUser.username}`)
     .get()
     .then(doc => {
       // Check if the username already exsists, if it does send 400 as response.
@@ -57,7 +58,7 @@ exports.signUp = (request, response) => {
         imageUrl: `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/no-image.png?alt=media`,
         userId
       };
-      return db.doc(`/users/${newUser.username}`).set(userDetails);
+      return db.doc(`${USERS_ROUTE}/${newUser.username}`).set(userDetails);
     })
     .then(() => response.status(201).json({ userToken }))
     // Catch any errors
@@ -104,7 +105,7 @@ exports.logIn = (request, response) => {
 exports.addUserDetails = (request, response) => {
   let userDetails = reduceUserDetails(request.body);
 
-  db.doc(`/users/${request.user.username}`)
+  db.doc(`${USERS_ROUTE}/${request.user.username}`)
     .update(userDetails)
     .then(() => {
       return response.json({ message: "Details added successfully" });
@@ -117,7 +118,7 @@ exports.addUserDetails = (request, response) => {
 
 exports.getUserDetails = (request, response) => {
   let userData = {};
-  db.doc(`/users/${request.user.username}`)
+  db.doc(`${USERS_ROUTE}/${request.user.username}`)
     .get()
     .then(doc => {
       if (doc.exists) {
@@ -134,7 +135,7 @@ exports.getUserDetails = (request, response) => {
         userData.likes.push(doc.data());
       });
       return db
-        .collection("notifications")
+        .collection(NOTIFICATIONS_COLLECTION)
         .where("recipient", "==", request.user.username)
         .orderBy("createdAt", "desc")
         .limit(10)
