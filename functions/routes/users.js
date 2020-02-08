@@ -4,7 +4,8 @@ const { admin, db } = require("../utils/admin");
 const {
   WORKOUTS_COLLECTION,
   USERS_ROUTE,
-  NOTIFICATIONS_COLLECTION
+  NOTIFICATIONS_COLLECTION,
+  LIKES_COLLECTION
 } = require("./constants");
 const { reduceUserDetails } = require("../utils/helpers");
 const {
@@ -128,7 +129,7 @@ exports.getUserDetails = (request, response) => {
       if (doc.exists) {
         userData.credentials = doc.data();
         return db
-          .collection("likes")
+          .collection(LIKES_COLLECTION)
           .where("username", "==", request.user.username)
           .get();
       }
@@ -217,7 +218,9 @@ exports.uploadProfileImage = (request, response) => {
       .then(() => {
         // This is where the reference is added to the users database entry
         const imageUrl = `https://firebasestorage.googleapis.com/v0/b/${firebaseConfig.storageBucket}/o/${imageFileName}?alt=media`;
-        return db.doc(`/users/${request.user.username}`).update({ imageUrl });
+        return db
+          .doc(`${USERS_ROUTE}/${request.user.username}`)
+          .update({ imageUrl });
       })
       .then(() => {
         return response.json({ message: "image uploaded successfully" });
@@ -232,13 +235,13 @@ exports.uploadProfileImage = (request, response) => {
 
 exports.getAnyUserDetails = (request, response) => {
   let userData = {};
-  db.doc(`/users/${request.params.username}`)
+  db.doc(`${USERS_ROUTE}/${request.params.username}`)
     .get()
     .then(doc => {
       if (doc.exists) {
         userData.user = doc.data();
         return db
-          .collection("workouts")
+          .collection(WORKOUTS_COLLECTION)
           .where("username", "==", request.params.username)
           .orderBy("createdAt", "desc")
           .get();
