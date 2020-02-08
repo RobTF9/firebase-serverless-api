@@ -1,18 +1,9 @@
 const { db } = require("../utils/admin");
-
-const {
-  WORKOUTS_COLLECTION,
-  WORKOUTS_ROUTE,
-  COMMENTS_COLLECTION,
-  LIKES_COLLECTION,
-  LIKES_ROUTE
-} = require("./constants");
-
 const { createSlug } = require("../utils/helpers");
 const { validateWorkout } = require("../utils/validators");
 
 exports.getAllWorkouts = (request, response) => {
-  db.collection(WORKOUTS_COLLECTION)
+  db.collection("workouts")
     .orderBy("createdAt", "desc")
     .get()
     // Loop over data and push it into array
@@ -53,7 +44,7 @@ exports.createNewWorkout = (request, response) => {
 
   if (!valid) return response.status(400).json(errors);
 
-  db.collection(WORKOUTS_COLLECTION)
+  db.collection("workouts")
     .add(workout)
     .then(doc => {
       const responseWorkout = workout;
@@ -68,7 +59,7 @@ exports.createNewWorkout = (request, response) => {
 
 exports.getWorkout = (request, response) => {
   let workoutData = {};
-  db.doc(`${WORKOUTS_ROUTE}/${request.params.workoutId}`)
+  db.doc(`/workouts/${request.params.workoutId}`)
     .get()
     .then(doc => {
       if (!doc.exists) {
@@ -77,7 +68,7 @@ exports.getWorkout = (request, response) => {
       workoutData = doc.data();
       workoutData.workoutId = doc.id;
       return db
-        .collection(COMMENTS_COLLECTION)
+        .collection("comments")
         .orderBy("createdAt", "desc")
         .where("workoutId", "==", request.params.workoutId)
         .get();
@@ -107,7 +98,7 @@ exports.commentOnWorkout = (request, response) => {
     userImage: request.user.imageUrl
   };
 
-  db.doc(`${WORKOUTS_ROUTE}/${request.params.workoutId}`)
+  db.doc(`/workouts/${request.params.workoutId}`)
     .get()
     .then(doc => {
       if (!doc.exists) {
@@ -116,7 +107,7 @@ exports.commentOnWorkout = (request, response) => {
       return doc.ref.update({ comments: doc.data().comments + 1 });
     })
     .then(() => {
-      return db.collection(COMMENTS_COLLECTION).add(newComment);
+      return db.collection("comments").add(newComment);
     })
     .then(() => {
       response.json(newComment);
@@ -129,12 +120,12 @@ exports.commentOnWorkout = (request, response) => {
 
 exports.likeWorkout = (request, response) => {
   const likeDoc = db
-    .collection(LIKES_COLLECTION)
+    .collection("likes")
     .where("username", "==", request.user.username)
     .where("workoutId", "==", request.params.workoutId)
     .limit(1);
 
-  const workoutDoc = db.doc(`${WORKOUTS_ROUTE}/${request.params.workoutId}`);
+  const workoutDoc = db.doc(`/workouts/${request.params.workoutId}`);
 
   let workoutData;
 
@@ -152,7 +143,7 @@ exports.likeWorkout = (request, response) => {
     .then(data => {
       if (data.empty) {
         return db
-          .collection(LIKES_COLLECTION)
+          .collection("likes")
           .add({
             workoutId: request.params.workoutId,
             username: request.user.username
@@ -176,12 +167,12 @@ exports.likeWorkout = (request, response) => {
 
 exports.unLikeWorkout = (request, response) => {
   const likeDoc = db
-    .collection(LIKES_COLLECTION)
+    .collection("likes")
     .where("username", "==", request.user.username)
     .where("workoutId", "==", request.params.workoutId)
     .limit(1);
 
-  const workoutDoc = db.doc(`${WORKOUTS_ROUTE}/${request.params.workoutId}`);
+  const workoutDoc = db.doc(`/workouts/${request.params.workoutId}`);
 
   let workoutData;
 
@@ -203,7 +194,7 @@ exports.unLikeWorkout = (request, response) => {
           .json({ error: "Workout not already liked!" });
       } else {
         return db
-          .doc(`${LIKES_ROUTE}/${data.docs[0].id}`)
+          .doc(`/likes/${data.docs[0].id}`)
           .delete()
           .then(() => {
             workoutData.likes--;
@@ -221,7 +212,7 @@ exports.unLikeWorkout = (request, response) => {
 };
 
 exports.deleteWorkout = (request, response) => {
-  const workout = db.doc(`${WORKOUTS_ROUTE}/${request.params.workoutId}`);
+  const workout = db.doc(`/workouts/${request.params.workoutId}`);
 
   workout
     .get()

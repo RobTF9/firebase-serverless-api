@@ -1,5 +1,4 @@
 const { admin, db } = require("./admin");
-const { USERS_COLLECTION } = require("../routes/constants");
 
 module.exports = (request, response, next) => {
   // Initialize token
@@ -25,7 +24,7 @@ module.exports = (request, response, next) => {
     .then(decodedToken => {
       request.user = decodedToken;
       return db
-        .collection(USERS_COLLECTION)
+        .collection("users")
         .where("userId", "==", request.user.uid)
         .limit(1)
         .get();
