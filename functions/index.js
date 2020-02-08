@@ -9,6 +9,7 @@ const {
   LOGIN_ROUTE,
   USER_IMAGE_ROUTE,
   USER_ROUTE,
+  USERS_ROUTE,
   LIKES_COLLECTION,
   NOTIFICATIONS_ROUTE,
   COMMENTS_COLLECTION
@@ -53,7 +54,7 @@ app.post(LOGIN_ROUTE, logIn);
 app.post(USER_IMAGE_ROUTE, FBAuth, uploadProfileImage);
 app.post(USER_ROUTE, FBAuth, addUserDetails);
 app.get(USER_ROUTE, FBAuth, getUserDetails);
-app.get(`${USER_ROUTE}/:handle`, getAnyUserDetails);
+app.get(`${USERS_ROUTE}/:username`, getAnyUserDetails);
 
 // Export express router on /api
 exports.api = functions.region("europe-west1").https.onRequest(app);

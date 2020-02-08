@@ -232,18 +232,18 @@ exports.uploadProfileImage = (request, response) => {
 
 exports.getAnyUserDetails = (request, response) => {
   let userData = {};
-  db.doc(`${USERS_ROUTE}/${request.params.username}`)
+  db.doc(`/users/${request.params.username}`)
     .get()
     .then(doc => {
       if (doc.exists) {
         userData.user = doc.data();
         return db
-          .collection(WORKOUTS_COLLECTION)
+          .collection("workouts")
           .where("username", "==", request.params.username)
           .orderBy("createdAt", "desc")
           .get();
       } else {
-        return response.status(404).json({ errror: "User not found" });
+        return response.status(404).json({ error: "User not found" });
       }
     })
     .then(data => {
@@ -251,7 +251,6 @@ exports.getAnyUserDetails = (request, response) => {
       data.forEach(doc => {
         userData.workouts.push({
           title: doc.data().title,
-          slug: doc.data().slug,
           createdAt: doc.data().createdAt,
           username: doc.data().username,
           userImage: doc.data().userImage,
