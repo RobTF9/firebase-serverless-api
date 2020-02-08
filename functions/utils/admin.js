@@ -8,8 +8,11 @@ const serviceAccount =
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://workout-app-8d732.firebaseio.com",
-  firebaseConfig
+  databaseURL:
+    functions.config().app.environment === "dev"
+      ? "https://fitio-app-dev.firebaseio.com"
+      : "https://fitio-app-prod.firebaseio.com",
+  ...firebaseConfig
 });
 
 // Create database ref
