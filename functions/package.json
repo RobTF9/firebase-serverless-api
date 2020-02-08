@@ -3,7 +3,9 @@
   "description": "API for 'fitio' a voice activated workout application.",
   "scripts": {
     "lint": "eslint .",
+    "preserve": "firebase functions:config:get > .runtimeconfig.json",
     "serve": "firebase serve --only functions",
+    "preshell": "firebase functions:config:get > .runtimeconfig.json",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
     "env": "firebase functions:config:get",
