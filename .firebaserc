@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "development": "fitio-app-dev",
+    "production": "fitio-app-prod"
+  }
+}
