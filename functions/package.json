@@ -6,10 +6,15 @@
     "serve": "firebase serve --only functions",
     "shell": "firebase functions:shell",
     "start": "npm run shell",
+    "env": "firebase functions:config:get",
+    "dev": "firebase functions:config:set app.environment=\"dev\" && firebase use development",
+    "prod": "firebase functions:config:set app.environment=\"prod\" && firebase use production",
+    "predeploy": "npm run dev",
     "deploy": "firebase deploy --only functions",
-    "preproduction": "firebase functions:config:set app.environment=\"prod\" && firebase use production",
+    "postdeploy": "npm run env",
+    "preproduction": "npm run prod",
     "production": "firebase deploy --only functions",
-    "postproduction": "firebase functions:config:set app.environment=\"dev\" && firebase use development",
+    "postproduction": "npm run dev && npm run env",
     "logs": "firebase functions:log"
   },
   "engines": {
