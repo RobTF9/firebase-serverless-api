@@ -1,6 +1,7 @@
 // Contstants
 const WORKOUTS_COLLECTION = "workouts";
 const COMMENTS_COLLECTION = "comments";
+const COMMENTS_ROUTE = "/comments";
 const LIKES_COLLECTION = "likes";
 const LIKES_ROUTE = "/likes";
 const USERS_COLLECTION = "users";
@@ -28,5 +29,6 @@ module.exports = {
   LIKES_COLLECTION,
   LIKES_ROUTE,
   NOTIFICATIONS_ROUTE,
-  NOTIFICATIONS_COLLECTION
+  NOTIFICATIONS_COLLECTION,
+  COMMENTS_ROUTE
 };

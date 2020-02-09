@@ -21,12 +21,8 @@ exports.logIn = (request, response) => {
     .then(token => response.json({ token }))
     .catch(error => {
       console.error(error);
-      if (error.code === "auth/wrong-password") {
-        return response
-          .status(403)
-          .json({ general: "Wrong credentials, please try again." });
-      } else {
-        return response.status(500).json({ error: error.code });
-      }
+      return response
+        .status(403)
+        .json({ general: "Wrong email or password, please try again." });
     });
 };

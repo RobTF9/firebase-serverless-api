@@ -9,7 +9,8 @@ const {
   LOGIN_ROUTE,
   USER_IMAGE_ROUTE,
   USER_ROUTE,
-  USERS_ROUTE
+  USERS_ROUTE,
+  NOTIFICATIONS_ROUTE
 } = require("./routes/constants");
 
 const { getAllWorkouts } = require("./routes/workouts/getAllWorkouts");
@@ -25,6 +26,9 @@ const { addUserDetails } = require("./routes/users/addUserDetails");
 const { getUserDetails } = require("./routes/users/getUserDetails");
 const { uploadProfileImage } = require("./routes/users/uploadProfileImage");
 const { getAnyUserDetails } = require("./routes/users/getAnyUserDetails");
+const {
+  markNotificationsRead
+} = require("./routes/users/markNotificationsRead");
 
 const FBAuth = require("./utils/fbAuth");
 
@@ -52,6 +56,7 @@ app.post(USER_IMAGE_ROUTE, FBAuth, uploadProfileImage);
 app.post(USER_ROUTE, FBAuth, addUserDetails);
 app.get(USER_ROUTE, FBAuth, getUserDetails);
 app.get(`${USERS_ROUTE}/:username`, getAnyUserDetails);
+app.post(NOTIFICATIONS_ROUTE, FBAuth, markNotificationsRead);
 
 // Export express router on /api
 exports.api = functions.region("europe-west1").https.onRequest(app);
@@ -60,3 +65,5 @@ exports.api = functions.region("europe-west1").https.onRequest(app);
 exports.createNotificationOnLike = require("./triggers/createNotificationOnLike");
 exports.deleteNotificationOnUnlike = require("./triggers/deleteNotificationOnUnlike");
 exports.createNotificationOnComment = require("./triggers/createNotificationOnComment");
+exports.onUserImageChange = require("./triggers/onUserImageChange");
+exports.deleteWorkoutCleanup = require("./triggers/deleteWorkoutCleanup");

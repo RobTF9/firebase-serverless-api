@@ -17,7 +17,7 @@ exports.commentOnWorkout = (request, response) => {
     .get()
     .then(doc => {
       if (!doc.exists) {
-        return response.status(404).json({ error: "Workout not found!" });
+        return response.status(404).json({ error: "Workout not found" });
       }
       return doc.ref.update({ comments: doc.data().comments + 1 });
     })

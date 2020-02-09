@@ -10,10 +10,11 @@ module.exports = functions
   .region("europe-west1")
   .firestore.document(`${COMMENTS_COLLECTION}/{id}`)
   .onCreate(snapshot => {
-    db.doc(`${WORKOUTS_ROUTE}/${snapshot.data().workoutId}`)
+    return db
+      .doc(`${WORKOUTS_ROUTE}/${snapshot.data().workoutId}`)
       .get()
       .then(doc => {
-        if (doc.exists) {
+        if (doc.exists && doc.data().username !== snapshot.data().username) {
           return db.doc(`${NOTIFICATIONS_ROUTE}/${snapshot.id}`).set({
             createdAt: new Date().toISOString(),
             recipient: doc.data().username,
@@ -24,12 +25,7 @@ module.exports = functions
           });
         }
       })
-      .then(() => {
-        // Don't need to send a response as this is just a trigger not an API endpoint.
-        return;
-      })
       .catch(error => {
         console.error(error);
-        return;
       });
   });
