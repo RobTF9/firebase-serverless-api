@@ -31,8 +31,8 @@ When using these scripts they need to be appended with `npm run` and run in the 
 | Scripts        | Contents                                                                          |
 | -------------- | --------------------------------------------------------------------------------- |
 | lint           | eslint .                                                                          |
-| serve          | firebase functions:shell                                                          |
-| start          | npm run shell                                                                     |
+| serve          | firebase serve --only functions                                                   |
+| start          | npm run serve                                                                     |
 | env            | firebase functions:config:get                                                     |
 | dev            | firebase functions:config:set app.environment=\"dev\" && firebase use development |
 | prod           | firebase functions:config:set app.environment=\"prod\" && firebase use production |
