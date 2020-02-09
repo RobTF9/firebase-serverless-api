@@ -1,5 +1,6 @@
 const functions = require("firebase-functions");
-
+const firebase = require("firebase");
+const firebaseConfig = require("./utils/config");
 const { db } = require("./utils/admin");
 
 const {
@@ -25,18 +26,18 @@ const {
   deleteWorkout
 } = require("./routes/workouts");
 const { signUp } = require("./routes/users/signUp");
-const {
-  logIn,
-  uploadProfileImage,
-  addUserDetails,
-  getUserDetails,
-  getAnyUserDetails
-} = require("./routes/users");
+const { logIn } = require("./routes/users/logIn");
+const { addUserDetails } = require("./routes/users/addUserDetails");
+const { getUserDetails } = require("./routes/users/getUserDetails");
+const { uploadProfileImage } = require("./routes/users/uploadProfileImage");
+const { getAnyUserDetails } = require("./routes/users/getAnyUserDetails");
 
 const FBAuth = require("./utils/fbAuth");
 
 // Initialize express
 const app = require("express")();
+
+firebase.initializeApp(firebaseConfig);
 
 // Workout routes
 app.get(WORKOUTS_ROUTE, getAllWorkouts);
