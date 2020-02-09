@@ -3,3 +3,5 @@ node_modules/
 credentials/
 
 .runtimeconfig.json
+
+utils/config.js
