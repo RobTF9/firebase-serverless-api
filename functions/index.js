@@ -16,15 +16,13 @@ const {
   COMMENTS_COLLECTION
 } = require("./routes/constants");
 
-const {
-  getAllWorkouts,
-  createNewWorkout,
-  getWorkout,
-  commentOnWorkout,
-  likeWorkout,
-  unLikeWorkout,
-  deleteWorkout
-} = require("./routes/workouts");
+const { getAllWorkouts } = require("./routes/workouts/getAllWorkouts");
+const { createNewWorkout } = require("./routes/workouts/createNewWorkout");
+const { getWorkout } = require("./routes/workouts/getWorkout");
+const { commentOnWorkout } = require("./routes/workouts/commentOnWorkout");
+const { likeWorkout } = require("./routes/workouts/likeWorkout");
+const { unLikeWorkout } = require("./routes/workouts/unLikeWorkout");
+const { deleteWorkout } = require("./routes/workouts/deleteWorkout");
 const { signUp } = require("./routes/users/signUp");
 const { logIn } = require("./routes/users/logIn");
 const { addUserDetails } = require("./routes/users/addUserDetails");
