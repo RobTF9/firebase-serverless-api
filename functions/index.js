@@ -1,7 +1,6 @@
 const functions = require("firebase-functions");
 const firebase = require("firebase");
 const firebaseConfig = require("./utils/config");
-const { db } = require("./utils/admin");
 
 const {
   WORKOUTS_ROUTE,
@@ -10,10 +9,7 @@ const {
   LOGIN_ROUTE,
   USER_IMAGE_ROUTE,
   USER_ROUTE,
-  USERS_ROUTE,
-  LIKES_COLLECTION,
-  NOTIFICATIONS_ROUTE,
-  COMMENTS_COLLECTION
+  USERS_ROUTE
 } = require("./routes/constants");
 
 const { getAllWorkouts } = require("./routes/workouts/getAllWorkouts");
@@ -58,74 +54,6 @@ app.get(`${USERS_ROUTE}/:username`, getAnyUserDetails);
 exports.api = functions.region("europe-west1").https.onRequest(app);
 
 // Notification triggers
-exports.createNotificationOnLike = functions
-  .region("europe-west1")
-  .firestore.document(`${LIKES_COLLECTION}/{id}`)
-  .onCreate(snapshot => {
-    db.doc(`${WORKOUTS_ROUTE}/${snapshot.data().workoutId}`)
-      .get()
-      .then(doc => {
-        if (doc.exists) {
-          return db.doc(`${NOTIFICATIONS_ROUTE}/${snapshot.id}`).set({
-            createdAt: new Date().toISOString(),
-            recipient: doc.data().username,
-            sender: snapshot.data().username,
-            type: "like",
-            read: false,
-            workoutId: doc.id
-          });
-        }
-      })
-      .then(() => {
-        // Don't need to send a response as this is just a trigger not an API endpoint.
-        return;
-      })
-      .catch(error => {
-        console.error(error);
-        return;
-      });
-  });
-
-exports.deleteNotificationOnUnlike = functions
-  .region("europe-west1")
-  .firestore.document(`${LIKES_COLLECTION}/{id}`)
-  .onDelete(snapshot => {
-    db.doc(`${NOTIFICATIONS_ROUTE}/${snapshot.id}`)
-      .delete()
-      .then(() => {
-        // Don't need to send a response as this is just a trigger not an API endpoint.
-        return;
-      })
-      .catch(error => {
-        console.error(error);
-        return;
-      });
-  });
-
-exports.createNotificationOnComment = functions
-  .region("europe-west1")
-  .firestore.document(`${COMMENTS_COLLECTION}/{id}`)
-  .onCreate(snapshot => {
-    db.doc(`${WORKOUTS_ROUTE}/${snapshot.data().workoutId}`)
-      .get()
-      .then(doc => {
-        if (doc.exists) {
-          return db.doc(`${NOTIFICATIONS_ROUTE}/${snapshot.id}`).set({
-            createdAt: new Date().toISOString(),
-            recipient: doc.data().username,
-            sender: snapshot.data().username,
-            type: "comment",
-            read: false,
-            workoutId: doc.id
-          });
-        }
-      })
-      .then(() => {
-        // Don't need to send a response as this is just a trigger not an API endpoint.
-        return;
-      })
-      .catch(error => {
-        console.error(error);
-        return;
-      });
-  });
+exports.createNotificationOnLike = require("./triggers/createNotificationOnLike");
+exports.deleteNotificationOnUnlike = require("./triggers/deleteNotificationOnUnlike");
+exports.createNotificationOnComment = require("./triggers/createNotificationOnComment");
