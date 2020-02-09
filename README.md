@@ -51,7 +51,7 @@ When using these scripts they need to be appended with `npm run` and run in the 
 As you can see from the scripts this project uses two environments production and development.
 The `prod` and `dev` commands allow you to switch between environments.
 By default you will be using the development and should only use production for deploying to the production firebase project.
-The code is set to switch config between the two projects, the only thing you'll need to get it working is the credentials which are not stored in this repo.
+The code is set to switch config between the two projects, you'll need the credentials and config which are not stored in this repo.
 Please get in contact with me if you wish to contribute and I will provide you with the credential files.
 
 <br/><br/>
