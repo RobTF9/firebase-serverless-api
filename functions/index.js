@@ -31,6 +31,9 @@ const FBAuth = require("./utils/fbAuth");
 // Initialize express
 const app = require("express")();
 
+const cors = require("cors");
+app.use(cors());
+
 firebase.initializeApp(firebaseConfig);
 
 // Workout routes
