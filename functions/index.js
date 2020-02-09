@@ -24,9 +24,8 @@ const {
   unLikeWorkout,
   deleteWorkout
 } = require("./routes/workouts");
-
+const { signUp } = require("./routes/users/signUp");
 const {
-  signUp,
   logIn,
   uploadProfileImage,
   addUserDetails,
