@@ -48,6 +48,8 @@ app.delete(`${WORKOUT_ROUTE}/:workoutId`, FBAuth, deleteWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId/like`, FBAuth, likeWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId/unlike`, FBAuth, unLikeWorkout);
 app.post(`${WORKOUT_ROUTE}/:workoutId/comment`, FBAuth, commentOnWorkout);
+// TODO edit workout
+// TODO add image to workout and excercise
 
 // User routes
 app.post(SIGNUP_ROUTE, signUp);
