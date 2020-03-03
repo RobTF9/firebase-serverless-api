@@ -16,6 +16,7 @@ const {
 const { getAllWorkouts } = require("./routes/workouts/getAllWorkouts");
 const { createNewWorkout } = require("./routes/workouts/createNewWorkout");
 const { getWorkout } = require("./routes/workouts/getWorkout");
+const { editWorkout } = require("./routes/workouts/editWorkout");
 const { commentOnWorkout } = require("./routes/workouts/commentOnWorkout");
 const { likeWorkout } = require("./routes/workouts/likeWorkout");
 const { unLikeWorkout } = require("./routes/workouts/unLikeWorkout");
@@ -29,6 +30,7 @@ const { getAnyUserDetails } = require("./routes/users/getAnyUserDetails");
 const {
   markNotificationsRead
 } = require("./routes/users/markNotificationsRead");
+const { copyWorkout } = require("./routes/workouts/copyWorkout");
 
 const FBAuth = require("./utils/fbAuth");
 
@@ -44,11 +46,14 @@ firebase.initializeApp(firebaseConfig);
 app.get(WORKOUTS_ROUTE, getAllWorkouts);
 app.post(WORKOUT_ROUTE, FBAuth, createNewWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId`, getWorkout);
+app.post(`${WORKOUT_ROUTE}/:workoutId`, FBAuth, editWorkout);
 app.delete(`${WORKOUT_ROUTE}/:workoutId`, FBAuth, deleteWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId/like`, FBAuth, likeWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId/unlike`, FBAuth, unLikeWorkout);
 app.post(`${WORKOUT_ROUTE}/:workoutId/comment`, FBAuth, commentOnWorkout);
-// TODO edit workout
+app.post(`${WORKOUT_ROUTE}/:workoutId`, FBAuth, editWorkout);
+// TODO copy workout
+app.post(`${WORKOUT_ROUTE}/:workoutId/copy`, FBAuth, copyWorkout);
 // TODO add image to workout and excercise
 
 // User routes
