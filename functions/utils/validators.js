@@ -52,6 +52,9 @@ exports.validateWorkout = workout => {
   if (isEmptyArray(workout.excercises))
     errors.excercise = "Workout must have at least one excercise.";
 
+  // Validate type
+  if (isEmptyArray(workout.type)) errors.type = "Select a workout type.";
+
   const excerciseSchema = {
     title: value =>
       typeof value === "string" && value.trim() !== "" ? true : false,

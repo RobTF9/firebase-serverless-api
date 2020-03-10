@@ -23,6 +23,7 @@ exports.copyWorkout = (request, response) => {
         userImage: request.user.imageUrl,
         excercises: data.excercises,
         likes: 0,
+        type: data.type,
         comments: 0
       };
       return workout;

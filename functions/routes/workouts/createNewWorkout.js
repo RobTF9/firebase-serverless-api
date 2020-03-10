@@ -5,7 +5,7 @@ const { validateWorkout } = require("../../utils/validators");
 
 exports.createNewWorkout = (request, response) => {
   // Deconstruct values off body object.
-  const { title, countdown, excercises } = request.body;
+  const { title, countdown, excercises, type } = request.body;
 
   // The new workout object to be added to the database.
   const workout = {
@@ -17,6 +17,7 @@ exports.createNewWorkout = (request, response) => {
     createdAt: new Date().toISOString(),
     userImage: request.user.imageUrl,
     excercises,
+    type,
     likes: 0,
     comments: 0
   };

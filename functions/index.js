@@ -52,7 +52,6 @@ app.get(`${WORKOUT_ROUTE}/:workoutId/like`, FBAuth, likeWorkout);
 app.get(`${WORKOUT_ROUTE}/:workoutId/unlike`, FBAuth, unLikeWorkout);
 app.post(`${WORKOUT_ROUTE}/:workoutId/comment`, FBAuth, commentOnWorkout);
 app.post(`${WORKOUT_ROUTE}/:workoutId`, FBAuth, editWorkout);
-// TODO copy workout
 app.post(`${WORKOUT_ROUTE}/:workoutId/copy`, FBAuth, copyWorkout);
 // TODO add image to workout and excercise
 
