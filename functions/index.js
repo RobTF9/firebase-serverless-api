@@ -38,7 +38,7 @@ const FBAuth = require("./utils/fbAuth");
 const app = require("express")();
 
 const cors = require("cors");
-app.use(cors());
+app.use(cors({ origin: true }));
 
 firebase.initializeApp(firebaseConfig);
 
