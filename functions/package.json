@@ -17,7 +17,8 @@
     "preproduction": "npm run prod",
     "production": "firebase deploy --only functions",
     "postproduction": "npm run dev && npm run env",
-    "logs": "firebase functions:log"
+    "logs": "firebase functions:log",
+    "test": "mocha --reporter spec"
   },
   "engines": {
     "node": "8"
@@ -33,7 +34,8 @@
   "devDependencies": {
     "eslint": "^5.12.0",
     "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.1.6"
+    "firebase-functions-test": "^0.1.6",
+    "mocha": "^7.0.1"
   },
   "private": true
 }

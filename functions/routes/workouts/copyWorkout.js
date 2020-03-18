@@ -22,8 +22,10 @@ exports.copyWorkout = (request, response) => {
         createdAt: new Date().toISOString(),
         userImage: request.user.imageUrl,
         excercises: data.excercises,
-        likes: 0,
+        description: data.description,
         type: data.type,
+        likes: 0,
+        logs: 0,
         comments: 0
       };
       return workout;

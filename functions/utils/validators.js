@@ -48,6 +48,9 @@ exports.validateWorkout = workout => {
   // Validate title
   if (isEmpty(workout.title)) errors.title = "Must not be empty.";
 
+  // Validate title
+  if (isEmpty(workout.description)) errors.description = "Must not be empty.";
+
   // Validate excercises
   if (isEmptyArray(workout.excercises))
     errors.excercise = "Workout must have at least one excercise.";
