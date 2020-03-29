@@ -15,7 +15,9 @@ const LOGIN_ROUTE = "/login";
 const NOTIFICATIONS_ROUTE = "/notifications";
 const NOTIFICATIONS_COLLECTION = "notifications";
 const TAGS_ROUTE = "/tags";
+const TAGS_COLLECTION = "tags";
 const MUSCLES_ROUTE = "/muscles";
+const MUSCLES_COLLECTION = "muscles";
 
 module.exports = {
   WORKOUTS_COLLECTION,
@@ -34,5 +36,7 @@ module.exports = {
   NOTIFICATIONS_COLLECTION,
   COMMENTS_ROUTE,
   TAGS_ROUTE,
-  MUSCLES_ROUTE
+  MUSCLES_ROUTE,
+  TAGS_COLLECTION,
+  MUSCLES_COLLECTION
 };
