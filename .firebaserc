@@ -1,6 +1,7 @@
 {
   "projects": {
     "development": "fitio-app-dev",
-    "production": "fitio-app-prod"
+    "production": "fitio-app-prod",
+    "default": "fitio-app-dev"
   }
 }
