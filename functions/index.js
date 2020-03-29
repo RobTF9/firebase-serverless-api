@@ -73,3 +73,9 @@ exports.deleteNotificationOnUnlike = require("./triggers/deleteNotificationOnUnl
 exports.createNotificationOnComment = require("./triggers/createNotificationOnComment");
 exports.onUserImageChange = require("./triggers/onUserImageChange");
 exports.deleteWorkoutCleanup = require("./triggers/deleteWorkoutCleanup");
+
+// Tag triggers
+exports.createTagOnWorkoutCreation = require("./triggers/createTagOnWorkoutCreation");
+exports.createTagOnWorkoutUpdate = require("./triggers/createTagOnWorkoutUpdate");
+exports.createMuscleGroupOnWorkoutCreation = require("./triggers/createMuscleGroupOnWorkoutCreation");
+exports.createMuscleGroupOnWorkoutUpdate = require("./triggers/createMuscleGroupOnWorkoutUpdate");

@@ -18,7 +18,8 @@
     "production": "firebase deploy --only functions",
     "postproduction": "npm run dev && npm run env",
     "logs": "firebase functions:log",
-    "test": "mocha --reporter spec"
+    "test": "mocha --reporter spec",
+    "purgeW": "firebase firestore:delete -r -y /workouts"
   },
   "engines": {
     "node": "8"

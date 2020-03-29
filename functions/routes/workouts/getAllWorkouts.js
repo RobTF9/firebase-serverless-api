@@ -10,8 +10,9 @@ exports.getAllWorkouts = (request, response) => {
       let workouts = [];
       data.forEach(workout => {
         workouts.push({
-          workoutId: workout.id,
-          ...workout.data()
+          [workout.id]: {
+            ...workout.data()
+          }
         });
       });
       // Return array as json

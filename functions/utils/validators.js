@@ -55,8 +55,13 @@ exports.validateWorkout = workout => {
   if (isEmptyArray(workout.excercises))
     errors.excercise = "Workout must have at least one excercise.";
 
-  // Validate type
-  if (isEmptyArray(workout.type)) errors.type = "Select a workout type.";
+  // Validate tags
+  if (isEmptyArray(workout.tags))
+    errors.tags = "You must select a least one tag.";
+
+  // Validate muscles
+  if (isEmptyArray(workout.muscles))
+    errors.muscles = "You must select a least one tag.";
 
   const excerciseSchema = {
     title: value =>
@@ -64,9 +69,8 @@ exports.validateWorkout = workout => {
     sets: value => (typeof value === "number" ? true : false),
     reps: value => (typeof value === "number" ? true : false),
     rest: value => (typeof value === "number" ? true : false),
-    increment: value => (typeof value === "number" ? true : false),
     double: value => (typeof value === "boolean" ? true : false),
-    repetitions: value => (typeof value === "boolean" ? true : false)
+    timed: value => (typeof value === "boolean" ? true : false)
   };
 
   let excerciseErrors = [];
