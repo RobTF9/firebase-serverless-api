@@ -23,6 +23,8 @@ module.exports = functions
             read: false,
             workoutId: doc.id
           });
+        } else {
+          return null;
         }
       })
       .catch(error => {
