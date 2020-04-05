@@ -2,25 +2,27 @@ const { db } = require("../../utils/admin");
 const {
   USERS_ROUTE,
   NOTIFICATIONS_COLLECTION,
-  LIKES_COLLECTION
+  LIKES_COLLECTION,
 } = require("../constants");
 
 exports.getUserDetails = (request, response) => {
   let userData = {};
   db.doc(`${USERS_ROUTE}/${request.user.username}`)
     .get()
-    .then(doc => {
+    .then((doc) => {
       if (doc.exists) {
         userData.credentials = doc.data();
         return db
           .collection(LIKES_COLLECTION)
           .where("username", "==", request.user.username)
           .get();
+      } else {
+        return null;
       }
     })
-    .then(data => {
+    .then((data) => {
       userData.likes = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         userData.likes.push(doc.data());
       });
       return db
@@ -30,9 +32,9 @@ exports.getUserDetails = (request, response) => {
         .limit(10)
         .get();
     })
-    .then(data => {
+    .then((data) => {
       userData.notifications = [];
-      data.forEach(doc => {
+      data.forEach((doc) => {
         userData.notifications.push({
           createdAt: doc.data().createdAt,
           recipient: doc.data().recipient,
@@ -40,12 +42,12 @@ exports.getUserDetails = (request, response) => {
           type: doc.data().type,
           read: doc.data().read,
           workoutId: doc.data().workoutId,
-          notificationId: doc.id
+          notificationId: doc.id,
         });
       });
       return response.json(userData);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
       return response.status(500).json({ error: error.code });
     });

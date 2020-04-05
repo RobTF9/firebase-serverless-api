@@ -14,7 +14,7 @@ exports.logIn = (request, response) => {
   if (!valid) return response.status(400).json(errors);
 
   // Use firebase methods to validate authentication request.
-  firebase
+  return firebase
     .auth()
     .signInWithEmailAndPassword(user.email, user.password)
     .then(data => data.user.getIdToken())
