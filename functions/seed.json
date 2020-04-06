@@ -641,6 +641,262 @@
       "tags": ["mma", "HIIT", "interval"],
       "createdAt": "2020-03-29T13:31:58.760Z",
       "title": "MMA home workout"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcd",
+      "logs": 1,
+      "muscles": ["core"],
+      "slug": "core-one-robtf9",
+      "excercises": [
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Twisting crunch",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Dish tuck",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Superman",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        }
+      ],
+      "username": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "General floor core workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Core one"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabce",
+      "logs": 0,
+      "muscles": ["core"],
+      "slug": "core-two-robtf9",
+      "excercises": [
+        {
+          "rest": 60,
+          "reps": 50,
+          "title": "Leg paddles",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Extreme plank",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Iron cross",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        }
+      ],
+      "username": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "General floor core workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Core two"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcf",
+      "logs": 1,
+      "muscles": ["biceps", "triceps"],
+      "slug": "arms-robtf9",
+      "excercises": [
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        }
+      ],
+      "username": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Dumbbell arm workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Arms"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcf",
+      "logs": 0,
+      "muscles": ["biceps", "triceps"],
+      "slug": "arms-two-robtf9",
+      "excercises": [
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        }
+      ],
+      "username": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Dumbbell arm workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Arms two"
     }
   ]
 }
