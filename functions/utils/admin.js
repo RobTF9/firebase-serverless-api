@@ -12,10 +12,7 @@ admin.initializeApp({
     functions.config().app.environment === "dev"
       ? "https://fitio-app-dev.firebaseio.com"
       : "https://fitio-app-prod.firebaseio.com",
-  ...firebaseConfig
+  ...firebaseConfig,
 });
 
-// Create database ref
-const db = admin.firestore();
-
-module.exports = { admin, db };
+module.exports = admin;

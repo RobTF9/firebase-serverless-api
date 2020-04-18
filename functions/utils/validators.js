@@ -1,6 +1,6 @@
 const { isEmpty, isEmail, isEmptyArray } = require("../utils/helpers");
 
-exports.validateSignUpDetails = details => {
+exports.validateSignUpDetails = (details) => {
   // Initialize errors object
   let errors = {};
 
@@ -21,11 +21,11 @@ exports.validateSignUpDetails = details => {
 
   return {
     errors,
-    valid: Object.keys(errors).length === 0 ? true : false
+    valid: Object.keys(errors).length === 0 ? true : false,
   };
 };
 
-exports.validateLoginDetails = details => {
+exports.validateLoginDetails = (details) => {
   let errors = {};
 
   // Validate email address
@@ -37,11 +37,11 @@ exports.validateLoginDetails = details => {
   // Check if errors exsist
   return {
     errors,
-    valid: Object.keys(errors).length === 0 ? true : false
+    valid: Object.keys(errors).length === 0 ? true : false,
   };
 };
 
-exports.validateWorkout = workout => {
+exports.validateWorkout = (workout) => {
   // Initialize errors object
   let errors = {};
 
@@ -59,18 +59,14 @@ exports.validateWorkout = workout => {
   if (isEmptyArray(workout.tags))
     errors.tags = "You must select a least one tag.";
 
-  // Validate muscles
-  if (isEmptyArray(workout.muscles))
-    errors.muscles = "You must select a least one tag.";
-
   const excerciseSchema = {
-    title: value =>
+    title: (value) =>
       typeof value === "string" && value.trim() !== "" ? true : false,
-    sets: value => (typeof value === "number" ? true : false),
-    reps: value => (typeof value === "number" ? true : false),
-    rest: value => (typeof value === "number" ? true : false),
-    double: value => (typeof value === "boolean" ? true : false),
-    timed: value => (typeof value === "boolean" ? true : false)
+    sets: (value) => (typeof value === "number" ? true : false),
+    reps: (value) => (typeof value === "number" ? true : false),
+    rest: (value) => (typeof value === "number" ? true : false),
+    double: (value) => (typeof value === "boolean" ? true : false),
+    timed: (value) => (typeof value === "boolean" ? true : false),
   };
 
   let excerciseErrors = [];
@@ -78,11 +74,11 @@ exports.validateWorkout = workout => {
   const validateExcercise = (object, schema, index) => {
     // Create an array of errors by filtering an mapping over the keys of the past over object.
     let errors = Object.keys(schema)
-      .filter(key => !schema[key](object[key]))
-      .map(key => new Error(`Excercise ${index + 1} ${key} is invalid.`));
+      .filter((key) => !schema[key](object[key]))
+      .map((key) => new Error(`Excercise ${index + 1} ${key} is invalid.`));
 
     if (errors.length > 0) {
-      errors.forEach(function(error) {
+      errors.forEach((error) => {
         excerciseErrors.push(error.message);
       });
     }
@@ -98,6 +94,6 @@ exports.validateWorkout = workout => {
 
   return {
     errors,
-    valid: Object.keys(errors).length === 0 ? true : false
+    valid: Object.keys(errors).length === 0 ? true : false,
   };
 };
