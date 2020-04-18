@@ -44,7 +44,7 @@ notifications.forEach((notification) => {
 
 tags.forEach((tag) => {
   db.doc(`/tags/${tag}`)
-    .set(tag)
+    .set({ tag })
     .then(() => {
       console.log(`Tag ${tag} document written.`);
     })
