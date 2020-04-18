@@ -191,16 +191,6 @@
       "sender": "robtf9"
     }
   ],
-  "muscles": [
-    "chest",
-    "fingers",
-    "full body",
-    "glutes",
-    "legs",
-    "shoulders",
-    "tendons",
-    "upper body"
-  ],
   "tags": [
     "tag",
     "bodyweight",
@@ -219,14 +209,14 @@
       "username": "theChief",
       "createdAt": "2020-03-29T11:14:35.006Z",
       "location": "London, UK",
-      "userId": "UgdbmMg7EbeTC03d8HTMYlf9tVl2",
+      "id": "UgdbmMg7EbeTC03d8HTMYlf9tVl2",
       "email": "chief@fitio.com",
       "bio": "I'm a time poor CEO who likes strength training, cycling and running. I work out everyday. My biggest pain point is having enough time to plan and organise my workouts.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
     },
     {
       "website": "https://www.risephysiotherapy.com/",
-      "userId": "4eE4CHLLQfMA4qgVuH7L753n7mF2",
+      "id": "4eE4CHLLQfMA4qgVuH7L753n7mF2",
       "email": "trainer@fitio.com",
       "bio": "Rise is the product of a husband and wife team, Simon and Stephanie.  We have a vision to create a health and lifestyle company that aspires to provide the most effective, holistic and high-quality therapies and exercise prescription to help our clients get the most out of their bodies and their lives.  Our ethos is to live life to the full through gaining the most from our physicality; we promote healthfullness because we believe feeling fit, energetic, confident and at ease with our bodies is a privilege that deserves effort to maintain.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
@@ -240,7 +230,7 @@
       "createdAt": "2020-03-29T11:29:57.321Z",
       "location": "Worcester, UK",
       "website": "https://vojo.health/",
-      "userId": "ZzSTqMJ0fwesNfrpJd0VZdkGVg83",
+      "id": "ZzSTqMJ0fwesNfrpJd0VZdkGVg83",
       "email": "owner@fitio.com",
       "bio": "I own a vegan nutrition company, and like to help people keep healthy. I run everyday and would like more advanced analytics to track my progress."
     },
@@ -249,12 +239,12 @@
       "username": "Y0ungP",
       "createdAt": "2020-03-29T11:25:45.006Z",
       "location": "Bristol, UK",
-      "userId": "sPoB2Bdb76ghKPp3XlRGTWq7vrs1",
+      "id": "sPoB2Bdb76ghKPp3XlRGTWq7vrs1",
       "email": "yuppy@fitio.com",
       "bio": "I love working out and staying in shape, only problem is my motivation. One thing I'd like my apps to do better is be more specific about what muscle groups they're targeting"
     },
     {
-      "userId": "Niqdbi6gygfNbKa98kxRDd5ReES2",
+      "id": "Niqdbi6gygfNbKa98kxRDd5ReES2",
       "email": "athlete@fitio.com",
       "bio": "I'm a PM and I love all sports. I workout everyday to train for marathons and long bike rides. I'd like to be able to track my workouts and training sessions better. Less buggy intergration with IoT would be amazing.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
@@ -263,7 +253,7 @@
       "location": "Oxford, UK"
     },
     {
-      "userId": "MhugrNIGNGV5hOudycp24UUaBBt2",
+      "id": "MhugrNIGNGV5hOudycp24UUaBBt2",
       "email": "fighter@fitio.com",
       "bio": "I'm into mma and thai boxing. I work out a few times a week. I'm looking to find new workouts and track ones I've completed.",
       "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
@@ -276,7 +266,7 @@
       "username": "robtf9",
       "createdAt": "2020-02-08T15:18:39.328Z",
       "location": "Bristol, UK",
-      "userId": "fnZbqqAUHdQUG8uHtsO6LZpCu273",
+      "id": "fnZbqqAUHdQUG8uHtsO6LZpCu273",
       "email": "robert.b.s@live.co.uk",
       "bio": "Product designer who likes climbing, cycling and coding"
     }
@@ -284,7 +274,7 @@
   "workouts": [
     {
       "id": "i5XNZr4v6Y7HBbP9nRSq",
-      "username": "theChief",
+      "createdBy": "theChief",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "A free weight routing focused on pushing muscles.",
       "likes": 1,
@@ -293,7 +283,6 @@
       "createdAt": "2020-03-29T15:02:13.066Z",
       "title": "Freeweight circuit",
       "logs": 0,
-      "muscles": ["upper body"],
       "excercises": [
         {
           "reps": 10,
@@ -338,7 +327,6 @@
       "createdAt": "2020-03-29T14:54:55.312Z",
       "title": "Bodyweight circuit",
       "logs": 0,
-      "muscles": ["full body"],
       "excercises": [
         {
           "timed": true,
@@ -390,13 +378,13 @@
         }
       ],
       "slug": "bodyweight-circuit-athlete30",
-      "username": "athlete30",
+      "createdBy": "athlete30",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Simple bodyweight circuit for stripping fat."
     },
     {
       "id": "RXvNdzLPvzyIgnVLyKqZ",
-      "username": "Y0ungP",
+      "createdBy": "Y0ungP",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "A HIIT style workout to get the whole body pumped, especially the glutes.",
       "likes": 1,
@@ -405,7 +393,6 @@
       "createdAt": "2020-03-29T14:09:18.356Z",
       "title": "HIIT Workout",
       "logs": 0,
-      "muscles": ["full body", "glutes"],
       "excercises": [
         {
           "reps": 30,
@@ -484,7 +471,7 @@
     },
     {
       "id": "Y2qPlJBbJ8ZqRUlJHSh0",
-      "username": "VojoOwner",
+      "createdBy": "VojoOwner",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Running intervals, run fast for one minute then jog to rest.",
       "likes": 1,
@@ -493,7 +480,6 @@
       "createdAt": "2020-03-29T13:58:39.274Z",
       "title": "Running intervals",
       "logs": 0,
-      "muscles": ["legs", "glutes"],
       "excercises": [
         {
           "reps": 600,
@@ -529,7 +515,6 @@
       "createdAt": "2020-03-29T13:52:51.349Z",
       "title": "Finger resistance excercise",
       "logs": 0,
-      "muscles": ["fingers", "tendons"],
       "excercises": [
         {
           "rest": 0,
@@ -573,7 +558,7 @@
         }
       ],
       "slug": "finger-resistance-excercise-RiseTrainer",
-      "username": "RiseTrainer",
+      "createdBy": "RiseTrainer",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Excerices to be conducted in rice bucket, useful for building up finger strength and resistance for rock climbing.",
       "likes": 1
@@ -581,7 +566,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlokMe",
       "logs": 0,
-      "muscles": ["shoulders", "chest"],
       "slug": "mma-home-workout-mm4Fighter",
       "excercises": [
         {
@@ -633,7 +617,7 @@
           "double": false
         }
       ],
-      "username": "mm4Fighter",
+      "createdBy": "mm4Fighter",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Bodyweight condition workout for MMA at home or when travelling. Similar concept to HIIT.",
       "likes": 1,
@@ -645,7 +629,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabcd",
       "logs": 1,
-      "muscles": ["core"],
       "slug": "core-one-robtf9",
       "excercises": [
         {
@@ -673,7 +656,7 @@
           "double": false
         }
       ],
-      "username": "robtf9",
+      "createdBy": "robtf9",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "General floor core workout.",
       "likes": 0,
@@ -685,7 +668,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabce",
       "logs": 0,
-      "muscles": ["core"],
       "slug": "core-two-robtf9",
       "excercises": [
         {
@@ -713,7 +695,7 @@
           "double": false
         }
       ],
-      "username": "robtf9",
+      "createdBy": "robtf9",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "General floor core workout.",
       "likes": 0,
@@ -725,7 +707,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabcf",
       "logs": 1,
-      "muscles": ["biceps", "triceps"],
       "slug": "arms-robtf9",
       "excercises": [
         {
@@ -813,7 +794,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabcf",
       "logs": 0,
-      "muscles": ["biceps", "triceps"],
       "slug": "arms-two-robtf9",
       "excercises": [
         {
@@ -889,7 +869,7 @@
           "double": true
         }
       ],
-      "username": "robtf9",
+      "createdBy": "robtf9",
       "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Dumbbell arm workout.",
       "likes": 0,

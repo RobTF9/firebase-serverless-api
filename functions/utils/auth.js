@@ -81,7 +81,7 @@ exports.protect = (req, res, next) => {
       return users.where("userId", "==", req.user.uid).limit(1).get();
     })
     .then((data) => {
-      req.user.username = data.docs[0].data().username;
+      req.user = data.docs[0].data();
       return next();
     })
     .catch((err) => {

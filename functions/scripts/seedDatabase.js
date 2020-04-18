@@ -1,155 +1,76 @@
-const { db } = require("../utils/admin");
-const {
-  WORKOUTS_COLLECTION,
-  USERS_COLLECTION,
-  TAGS_COLLECTION,
-  MUSCLES_COLLECTION,
-  NOTIFICATIONS_COLLECTION,
-  LIKES_COLLECTION,
-  COMMENTS_COLLECTION
-} = require("../routes/constants");
+const { db } = require("../utils/database");
 
 const {
   workouts,
   users,
   tags,
-  muscles,
   notifications,
   likes,
-  comments
+  comments,
 } = require("../seed.json");
 
-comments.forEach(comment => {
-  const { username, createdAt, userImage, workoutId, body } = comment;
-
-  const newComment = {
-    username,
-    createdAt,
-    userImage,
-    workoutId,
-    body
-  };
-  db.doc(`${COMMENTS_COLLECTION}/${comment.id}`)
-    .set(newComment)
+comments.forEach((comment) => {
+  db.doc(`/comments/${comment.id}`)
+    .set(comment)
     .then(() => {
       console.log(`Comment ${comment.id} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
 
-likes.forEach(like => {
-  const { username, workoutId } = like;
-
-  const newLike = {
-    username,
-    workoutId
-  };
-  db.doc(`${LIKES_COLLECTION}/${like.id}`)
-    .set(newLike)
+likes.forEach((like) => {
+  db.doc(`/likes/${like.id}`)
+    .set(like)
     .then(() => {
       console.log(`Like ${like.id} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
 
-notifications.forEach(notification => {
-  const { type, read, recipient, createdAt, sender, workoutId } = notification;
-
-  const newNotification = {
-    type,
-    read,
-    recipient,
-    createdAt,
-    sender,
-    workoutId
-  };
-  db.doc(`${NOTIFICATIONS_COLLECTION}/${notification.id}`)
-    .set(newNotification)
+notifications.forEach((notification) => {
+  db.doc(`/notifications/${notification.id}`)
+    .set(notification)
     .then(() => {
       console.log(`Notification ${notification.id} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
 
-muscles.forEach(muscle => {
-  db.doc(`${MUSCLES_COLLECTION}/${muscle}`)
-    .set({
-      muscle
-    })
-    .then(() => {
-      console.log(`Muscle ${muscle} document written.`);
-    })
-    .catch(error => {
-      console.error(error);
-    });
-});
-
-tags.forEach(tag => {
-  db.doc(`${TAGS_COLLECTION}/${tag}`)
-    .set({
-      tag
-    })
+tags.forEach((tag) => {
+  db.doc(`/tags/${tag}`)
+    .set(tag)
     .then(() => {
       console.log(`Tag ${tag} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
 
-users.forEach(user => {
-  db.doc(`${USERS_COLLECTION}/${user.username}`)
+users.forEach((user) => {
+  db.doc(`/users/${user.username}`)
     .set(user)
     .then(() => {
       console.log(`User ${user.username} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
 
-workouts.forEach(workout => {
-  const {
-    username,
-    userImage,
-    description,
-    likes,
-    comments,
-    tags,
-    createdAt,
-    title,
-    logs,
-    muscles,
-    excercises,
-    slug
-  } = workout;
-
-  const newWorkout = {
-    username,
-    userImage,
-    description,
-    likes,
-    comments,
-    tags,
-    createdAt,
-    title,
-    logs,
-    muscles,
-    excercises,
-    slug
-  };
-  db.doc(`${WORKOUTS_COLLECTION}/${workout.id}`)
-    .set(newWorkout)
+workouts.forEach((workout) => {
+  db.doc(`/workouts/${workout.id}`)
+    .set(workout)
     .then(() => {
       console.log(`Workout ${workout.title} document written.`);
     })
-    .catch(error => {
+    .catch((error) => {
       console.error(error);
     });
 });
