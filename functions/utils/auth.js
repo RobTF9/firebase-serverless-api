@@ -78,7 +78,7 @@ exports.protect = (req, res, next) => {
     .verifyIdToken(token)
     .then((decodedToken) => {
       req.user = decodedToken;
-      return users.where("userId", "==", req.user.uid).limit(1).get();
+      return users.where("id", "==", req.user.uid).limit(1).get();
     })
     .then((data) => {
       req.user = data.docs[0].data();

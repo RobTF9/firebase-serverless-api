@@ -19,8 +19,8 @@
     "postproduction": "npm run dev && npm run env",
     "logs": "firebase functions:log",
     "test": "mocha --reporter spec",
-    "purge": "firebase firestore:delete -r -y /workouts && firebase firestore:delete -r -y /users && firebase firestore:delete -r -y /tags && firebase firestore:delete -r -y /muscles && firebase firestore:delete -r -y /likes && firebase firestore:delete -r -y /comments && firebase firestore:delete -r -y /notifications",
-    "seed": "node scripts/seedDatabase.js"
+    "preseed": "firebase firestore:delete -r -y /workouts && firebase firestore:delete -r -y /users && firebase firestore:delete -r -y /tags && firebase firestore:delete -r -y /muscles && firebase firestore:delete -r -y /likes && firebase firestore:delete -r -y /comments && firebase firestore:delete -r -y /notifications",
+    "seed": "node ../scripts/seedDatabase.js"
   },
   "engines": {
     "node": "8"
@@ -36,8 +36,7 @@
   "devDependencies": {
     "eslint": "^5.12.0",
     "eslint-plugin-promise": "^4.0.1",
-    "firebase-functions-test": "^0.1.6",
-    "mocha": "^7.0.1"
+    "firebase-functions-test": "^0.1.6"
   },
   "private": true
 }
