@@ -3,28 +3,30 @@ const { db, comments, likes, notifications } = require("../utils/database");
 
 module.exports = functions
   .region("europe-west1")
-  .firestore.document(`/workouts/{id}`)
-  .onDelete((snapshot, context) =>
-    comments
-      .where("workoutId", "==", context.params.id)
+  .firestore.document(`/workouts/{workoutId}`)
+  .onDelete((snapshot, context) => {
+    const workoutId = context.params.workoutId;
+    const batch = db.batch();
+    return comments
+      .where("workoutId", "==", workoutId)
       .get()
       .then((data) => {
         data.forEach((doc) => {
-          db.batch().delete(db.doc(`/comments/${doc.id}`));
+          batch.delete(db.doc(`/comments/${doc.id}`));
         });
-        return likes.where("workoutId", "==", context.params.id).get();
+        return likes.where("workoutId", "==", workoutId).get();
       })
       .then((data) => {
         data.forEach((doc) => {
-          db.batch().delete(db.doc(`/likes/${doc.id}`));
+          batch.delete(db.doc(`/likes/${doc.id}`));
         });
-        return notifications.where("workoutId", "==", context.params.id).get();
+        return notifications.where("workoutId", "==", workoutId).get();
       })
       .then((data) => {
         data.forEach((doc) => {
-          db.batch().delete(db.doc(`/notifications/${doc.id}`));
+          batch.delete(db.doc(`/notifications/${doc.id}`));
         });
-        return db.batch().commit();
+        return batch.commit();
       })
-      .catch((err) => console.error(err))
-  );
+      .catch((err) => console.error(err));
+  });

@@ -6,16 +6,16 @@ const {
   updateOne,
   removeOne,
 } = require("./workout.controllers");
-const { newWorkoutModel, updateWorkoutModel } = require("./workout.model");
+const { workoutModel } = require("./workout.model");
 
 // /api/workouts
 
-workoutRouter.route("/").get(getMany).post(newWorkoutModel, createOne);
+workoutRouter.route("/").get(getMany).post(workoutModel, createOne);
 
 workoutRouter
   .route("/:id")
   .get(getOne)
-  .put(updateWorkoutModel, updateOne)
+  .put(workoutModel, updateOne)
   .delete(removeOne);
 
 module.exports = workoutRouter;

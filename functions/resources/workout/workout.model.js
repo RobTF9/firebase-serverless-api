@@ -25,18 +25,19 @@ const excerciseSchema = {
   timed: (value) => (typeof value === "boolean" ? true : false),
 };
 
-exports.newWorkoutModel = (req, res, next) => {
-  const { title, excercises, tags, description } = req.body;
+exports.workoutModel = (req, res, next) => {
   const workout = {
-    title,
-    createdBy: req.user.username,
-    createdAt: new Date().toISOString(),
-    excercises,
-    tags,
-    description,
-    likes: 0,
-    logs: 0,
-    comments: 0,
+    title: req.body.title,
+    createdBy: req.body.createdBy ? req.body.createdBy : req.user.username,
+    createdAt: req.body.createdAt
+      ? req.body.createdAt
+      : new Date().toISOString(),
+    excercises: req.body.excercises,
+    tags: req.body.tags,
+    description: req.body.description,
+    likes: req.body.likes ? req.body.likes : 0,
+    logs: req.body.logs ? req.body.logs : 0,
+    comments: req.body.comments ? req.body.comments : 0,
   };
 
   let errors = {};
@@ -44,7 +45,7 @@ exports.newWorkoutModel = (req, res, next) => {
   Object.keys(workoutSchema)
     .filter((key) => !workoutSchema[key](workout[key]))
     .forEach((key) => {
-      errors[key] = ` Workout key:${key} is invalid`;
+      errors[key] = ` Workout key: ${key} is invalid`;
     });
 
   workout.excercises.forEach((excercise, index) => {
@@ -53,40 +54,12 @@ exports.newWorkoutModel = (req, res, next) => {
       .forEach((key) => {
         errors[
           key + "-" + index
-        ] = ` Excercise at array[${index}] key:${key} is invalid`;
+        ] = ` Excercise at array[${index}] key: ${key} is invalid`;
       });
   });
 
   if (Object.keys(errors).length > 0) return res.status(400).json(errors);
 
   req.body = workout;
-  return next();
-};
-
-exports.updateWorkoutModel = (req, res, next) => {
-  console.log(req.user);
-  if (req.user.username !== req.body.createdBy)
-    return res.status(400).json("Error: Not authorized");
-
-  let errors = {};
-
-  Object.keys(workoutSchema)
-    .filter((key) => !workoutSchema[key](req.body[key]))
-    .forEach((key) => {
-      errors[key] = ` Workout key:${key} is invalid`;
-    });
-
-  req.body.excercises.forEach((excercise, index) => {
-    Object.keys(excerciseSchema)
-      .filter((key) => !excerciseSchema[key](excercise[key]))
-      .forEach((key) => {
-        errors[
-          key + "-" + index
-        ] = ` Excercise at array[${index}] key:${key} is invalid`;
-      });
-  });
-
-  if (Object.keys(errors).length > 0) return res.status(400).json(errors);
-
   return next();
 };

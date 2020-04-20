@@ -1,0 +1,877 @@
+{
+  "comments": [
+    {
+      "id": "8pjrcNqluqDx2S7Q8lpT",
+      "username": "robtf9",
+      "createdAt": "2020-03-29T16:17:39.051Z",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "workoutId": "mH6GcK7mP1PMHlMlokMe",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+    },
+    {
+      "id": "9tW1HHNWgL83IOKRRuNP",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "workoutId": "RXvNdzLPvzyIgnVLyKqZ",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "username": "robtf9",
+      "createdAt": "2020-03-29T16:17:09.765Z"
+    },
+    {
+      "id": "moTGQXaVitZ2h5auopAt",
+      "workoutId": "i5XNZr4v6Y7HBbP9nRSq",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "username": "robtf9",
+      "createdAt": "2020-03-29T16:17:29.700Z",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
+    },
+    {
+      "id": "o4RdIFgmgfihhaErnFL3",
+      "workoutId": "Y2qPlJBbJ8ZqRUlJHSh0",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "username": "robtf9",
+      "createdAt": "2020-03-29T16:17:21.088Z",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
+    },
+    {
+      "id": "rFZUWgpOfAoCPyY38kp2",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "workoutId": "sMaZVgHDYvVj7jEqJGLR",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "username": "robtf9",
+      "createdAt": "2020-03-29T16:17:47.559Z"
+    },
+    {
+      "id": "s34cNLTLOlMg17xawReA",
+      "createdAt": "2020-03-29T16:17:00.926Z",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "workoutId": "15hvHN4w2KXcWIR5fe1w",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "username": "robtf9"
+    }
+  ],
+  "likes": [
+    {
+      "id": "5HSYfCchPbXnkJv9XrmQ",
+      "workoutId": "Y2qPlJBbJ8ZqRUlJHSh0",
+      "username": "robtf9"
+    },
+    {
+      "id": "ACz1ZP5LIpwduzs9LXD1",
+      "workoutId": "15hvHN4w2KXcWIR5fe1w",
+      "username": "robtf9"
+    },
+    {
+      "id": "BLpKvIRhPbNm0AMWnIwy",
+      "username": "robtf9",
+      "workoutId": "i5XNZr4v6Y7HBbP9nRSq"
+    },
+    {
+      "id": "JOZzKZHvqjap4yzTiky0",
+      "workoutId": "sMaZVgHDYvVj7jEqJGLR",
+      "username": "robtf9"
+    },
+    {
+      "id": "OraMa1Y0wwE3xcBR0jfj",
+      "workoutId": "mH6GcK7mP1PMHlMlokMe",
+      "username": "robtf9"
+    },
+    {
+      "id": "r81NtgsS7J8PzdgrfOXR",
+      "username": "robtf9",
+      "workoutId": "RXvNdzLPvzyIgnVLyKqZ"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "5HSYfCchPbXnkJv9XrmQ",
+      "type": "like",
+      "read": false,
+      "recipient": "VojoOwner",
+      "createdAt": "2020-03-29T16:19:49.451Z",
+      "sender": "robtf9",
+      "workoutId": "Y2qPlJBbJ8ZqRUlJHSh0"
+    },
+    {
+      "id": "8pjrcNqluqDx2S7Q8lpT",
+      "type": "comment",
+      "read": false,
+      "recipient": "mm4Fighter",
+      "createdAt": "2020-03-29T16:17:39.858Z",
+      "sender": "robtf9",
+      "workoutId": "mH6GcK7mP1PMHlMlokMe"
+    },
+    {
+      "id": "9tW1HHNWgL83IOKRRuNP",
+      "workoutId": "RXvNdzLPvzyIgnVLyKqZ",
+      "type": "comment",
+      "read": false,
+      "recipient": "Y0ungP",
+      "createdAt": "2020-03-29T16:17:11.082Z",
+      "sender": "robtf9"
+    },
+    {
+      "id": "ACz1ZP5LIpwduzs9LXD1",
+      "type": "like",
+      "read": false,
+      "recipient": "athlete30",
+      "createdAt": "2020-03-29T16:19:57.462Z",
+      "sender": "robtf9",
+      "workoutId": "15hvHN4w2KXcWIR5fe1w"
+    },
+    {
+      "id": "BLpKvIRhPbNm0AMWnIwy",
+      "type": "like",
+      "read": false,
+      "recipient": "theChief",
+      "createdAt": "2020-03-29T16:19:37.865Z",
+      "sender": "robtf9",
+      "workoutId": "i5XNZr4v6Y7HBbP9nRSq"
+    },
+    {
+      "id": "JOZzKZHvqjap4yzTiky0",
+      "recipient": "RiseTrainer",
+      "createdAt": "2020-03-29T16:19:24.956Z",
+      "sender": "robtf9",
+      "workoutId": "sMaZVgHDYvVj7jEqJGLR",
+      "type": "like",
+      "read": false
+    },
+    {
+      "id": "OraMa1Y0wwE3xcBR0jfj",
+      "recipient": "mm4Fighter",
+      "createdAt": "2020-03-29T16:19:31.575Z",
+      "sender": "robtf9",
+      "workoutId": "mH6GcK7mP1PMHlMlokMe",
+      "type": "like",
+      "read": false
+    },
+    {
+      "id": "moTGQXaVitZ2h5auopAt",
+      "type": "comment",
+      "read": false,
+      "recipient": "theChief",
+      "createdAt": "2020-03-29T16:17:31.159Z",
+      "sender": "robtf9",
+      "workoutId": "i5XNZr4v6Y7HBbP9nRSq"
+    },
+    {
+      "id": "o4RdIFgmgfihhaErnFL3",
+      "type": "comment",
+      "read": false,
+      "recipient": "VojoOwner",
+      "createdAt": "2020-03-29T16:17:29.045Z",
+      "sender": "robtf9",
+      "workoutId": "Y2qPlJBbJ8ZqRUlJHSh0"
+    },
+    {
+      "id": "r81NtgsS7J8PzdgrfOXR",
+      "recipient": "Y0ungP",
+      "createdAt": "2020-03-29T16:19:51.449Z",
+      "sender": "robtf9",
+      "workoutId": "RXvNdzLPvzyIgnVLyKqZ",
+      "type": "like",
+      "read": false
+    },
+    {
+      "id": "rFZUWgpOfAoCPyY38kp2",
+      "type": "comment",
+      "read": false,
+      "recipient": "RiseTrainer",
+      "createdAt": "2020-03-29T16:18:04.530Z",
+      "sender": "robtf9",
+      "workoutId": "sMaZVgHDYvVj7jEqJGLR"
+    },
+    {
+      "id": "s34cNLTLOlMg17xawReA",
+      "workoutId": "15hvHN4w2KXcWIR5fe1w",
+      "type": "comment",
+      "read": false,
+      "recipient": "athlete30",
+      "createdAt": "2020-03-29T16:17:07.016Z",
+      "sender": "robtf9"
+    }
+  ],
+  "tags": [
+    "tag",
+    "bodyweight",
+    "circuit",
+    "climbing",
+    "free weights",
+    "HIIT",
+    "interval",
+    "intervals",
+    "mma",
+    "rehab",
+    "running"
+  ],
+  "users": [
+    {
+      "username": "theChief",
+      "createdAt": "2020-03-29T11:14:35.006Z",
+      "location": "London, UK",
+      "id": "UgdbmMg7EbeTC03d8HTMYlf9tVl2",
+      "email": "chief@fitio.com",
+      "bio": "I'm a time poor CEO who likes strength training, cycling and running. I work out everyday. My biggest pain point is having enough time to plan and organise my workouts.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
+    },
+    {
+      "website": "https://www.risephysiotherapy.com/",
+      "id": "4eE4CHLLQfMA4qgVuH7L753n7mF2",
+      "email": "trainer@fitio.com",
+      "bio": "Rise is the product of a husband and wife team, Simon and Stephanie.  We have a vision to create a health and lifestyle company that aspires to provide the most effective, holistic and high-quality therapies and exercise prescription to help our clients get the most out of their bodies and their lives.  Our ethos is to live life to the full through gaining the most from our physicality; we promote healthfullness because we believe feeling fit, energetic, confident and at ease with our bodies is a privilege that deserves effort to maintain.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "RiseTrainer",
+      "createdAt": "2020-03-29T11:23:01.395Z",
+      "location": "Sheffield, UK"
+    },
+    {
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "VojoOwner",
+      "createdAt": "2020-03-29T11:29:57.321Z",
+      "location": "Worcester, UK",
+      "website": "https://vojo.health/",
+      "id": "ZzSTqMJ0fwesNfrpJd0VZdkGVg83",
+      "email": "owner@fitio.com",
+      "bio": "I own a vegan nutrition company, and like to help people keep healthy. I run everyday and would like more advanced analytics to track my progress."
+    },
+    {
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "Y0ungP",
+      "createdAt": "2020-03-29T11:25:45.006Z",
+      "location": "Bristol, UK",
+      "id": "sPoB2Bdb76ghKPp3XlRGTWq7vrs1",
+      "email": "yuppy@fitio.com",
+      "bio": "I love working out and staying in shape, only problem is my motivation. One thing I'd like my apps to do better is be more specific about what muscle groups they're targeting"
+    },
+    {
+      "id": "Niqdbi6gygfNbKa98kxRDd5ReES2",
+      "email": "athlete@fitio.com",
+      "bio": "I'm a PM and I love all sports. I workout everyday to train for marathons and long bike rides. I'd like to be able to track my workouts and training sessions better. Less buggy intergration with IoT would be amazing.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "athlete30",
+      "createdAt": "2020-03-29T11:18:49.754Z",
+      "location": "Oxford, UK"
+    },
+    {
+      "id": "MhugrNIGNGV5hOudycp24UUaBBt2",
+      "email": "fighter@fitio.com",
+      "bio": "I'm into mma and thai boxing. I work out a few times a week. I'm looking to find new workouts and track ones I've completed.",
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "mm4Fighter",
+      "createdAt": "2020-03-29T11:33:26.627Z",
+      "location": "Birmingham, UK"
+    },
+    {
+      "imageUrl": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "username": "robtf9",
+      "createdAt": "2020-02-08T15:18:39.328Z",
+      "location": "Bristol, UK",
+      "id": "fnZbqqAUHdQUG8uHtsO6LZpCu273",
+      "email": "robert.b.s@live.co.uk",
+      "bio": "Product designer who likes climbing, cycling and coding"
+    }
+  ],
+  "workouts": [
+    {
+      "id": "i5XNZr4v6Y7HBbP9nRSq",
+      "createdBy": "theChief",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "A free weight routing focused on pushing muscles.",
+      "likes": 1,
+      "comments": 1,
+      "tags": ["free weights", "circuit"],
+      "createdAt": "2020-03-29T15:02:13.066Z",
+      "title": "Freeweight circuit",
+      "logs": 0,
+      "excercises": [
+        {
+          "reps": 10,
+          "title": "Dumbbell bench press",
+          "timed": false,
+          "sets": 3,
+          "double": false,
+          "rest": 60
+        },
+        {
+          "rest": 90,
+          "reps": 6,
+          "title": "Incline bench press",
+          "timed": false,
+          "sets": 4,
+          "double": false
+        },
+        {
+          "reps": 8,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 4,
+          "double": false,
+          "rest": 60
+        },
+        {
+          "rest": 90,
+          "reps": 6,
+          "title": "Diamond press-up",
+          "timed": false,
+          "sets": 4,
+          "double": false
+        }
+      ]
+    },
+    {
+      "id": "15hvHN4w2KXcWIR5fe1w",
+      "likes": 1,
+      "comments": 1,
+      "tags": ["bodyweight", "circuit"],
+      "createdAt": "2020-03-29T14:54:55.312Z",
+      "title": "Bodyweight circuit",
+      "logs": 0,
+      "excercises": [
+        {
+          "timed": true,
+          "sets": 3,
+          "double": false,
+          "rest": 20,
+          "reps": 40,
+          "title": "Press ups"
+        },
+        {
+          "timed": true,
+          "sets": 3,
+          "double": false,
+          "rest": 20,
+          "reps": 40,
+          "title": "Squat jump"
+        },
+        {
+          "title": "Lateral bound",
+          "timed": true,
+          "sets": 3,
+          "double": false,
+          "rest": 20,
+          "reps": 40
+        },
+        {
+          "reps": 40,
+          "title": "Spiderman press-up",
+          "timed": true,
+          "sets": 3,
+          "double": false,
+          "rest": 20
+        },
+        {
+          "reps": 40,
+          "title": "Burpee",
+          "timed": true,
+          "sets": 3,
+          "double": false,
+          "rest": 20
+        },
+        {
+          "rest": 20,
+          "reps": 40,
+          "title": "Knee tuck jump",
+          "timed": true,
+          "sets": 3,
+          "double": false
+        }
+      ],
+      "createdBy": "athlete30",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Simple bodyweight circuit for stripping fat."
+    },
+    {
+      "id": "RXvNdzLPvzyIgnVLyKqZ",
+      "createdBy": "Y0ungP",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "A HIIT style workout to get the whole body pumped, especially the glutes.",
+      "likes": 1,
+      "comments": 1,
+      "tags": ["HIIT", "intervals"],
+      "createdAt": "2020-03-29T14:09:18.356Z",
+      "title": "HIIT Workout",
+      "logs": 0,
+      "excercises": [
+        {
+          "reps": 30,
+          "title": "Jump squats",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "reps": 30,
+          "title": "Plank",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "rest": 10,
+          "reps": 30,
+          "title": "Rock climbers",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "reps": 30,
+          "title": "Jump lunges",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "rest": 0,
+          "reps": 30,
+          "title": "Flutter kick squats",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 10,
+          "reps": 30,
+          "title": "Mason twists"
+        },
+        {
+          "reps": 30,
+          "title": "Military push ups",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "reps": 30,
+          "title": "Burpees",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "reps": 30,
+          "title": "Fifer scissors",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 10
+        }
+      ]
+    },
+    {
+      "id": "Y2qPlJBbJ8ZqRUlJHSh0",
+      "createdBy": "VojoOwner",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Running intervals, run fast for one minute then jog to rest.",
+      "likes": 1,
+      "comments": 1,
+      "tags": ["running", "intervals"],
+      "createdAt": "2020-03-29T13:58:39.274Z",
+      "title": "Running intervals",
+      "logs": 0,
+      "excercises": [
+        {
+          "reps": 600,
+          "title": "Warm up jog",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0
+        },
+        {
+          "title": "Run",
+          "timed": true,
+          "sets": 4,
+          "double": false,
+          "rest": 120,
+          "reps": 60
+        },
+        {
+          "title": "Warm down jog",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 0,
+          "reps": 300
+        }
+      ],
+      "slug": "running-intervals-VojoOwner"
+    },
+    {
+      "id": "sMaZVgHDYvVj7jEqJGLR",
+      "comments": 1,
+      "tags": ["climbing", "rehab"],
+      "createdAt": "2020-03-29T13:52:51.349Z",
+      "title": "Finger resistance excercise",
+      "logs": 0,
+      "excercises": [
+        {
+          "rest": 0,
+          "reps": 30,
+          "title": "Push with base of palm",
+          "timed": true,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "timed": true,
+          "sets": 1,
+          "double": true,
+          "rest": 0,
+          "reps": 30,
+          "title": "Scoop with fingers"
+        },
+        {
+          "title": "Pinch with fingers",
+          "timed": true,
+          "sets": 1,
+          "double": true,
+          "rest": 0,
+          "reps": 30
+        },
+        {
+          "timed": true,
+          "sets": 1,
+          "double": true,
+          "rest": 0,
+          "reps": 30,
+          "title": "Spread fingers"
+        },
+        {
+          "timed": true,
+          "sets": 1,
+          "double": true,
+          "rest": 0,
+          "reps": 30,
+          "title": "Expand and contract"
+        }
+      ],
+      "slug": "finger-resistance-excercise-RiseTrainer",
+      "createdBy": "RiseTrainer",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Excerices to be conducted in rice bucket, useful for building up finger strength and resistance for rock climbing.",
+      "likes": 1
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlokMe",
+      "logs": 0,
+      "slug": "mma-home-workout-mm4Fighter",
+      "excercises": [
+        {
+          "rest": 30,
+          "reps": 45,
+          "title": "Shadow boxing",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "reps": 45,
+          "title": "Burpees",
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 30
+        },
+        {
+          "timed": true,
+          "sets": 1,
+          "double": false,
+          "rest": 30,
+          "reps": 45,
+          "title": "Shadow boxing"
+        },
+        {
+          "rest": 30,
+          "reps": 45,
+          "title": "Jump squats",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 30,
+          "reps": 45,
+          "title": "Shadow boxing",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 30,
+          "reps": 45,
+          "title": "Matrix pushups",
+          "timed": true,
+          "sets": 1,
+          "double": false
+        }
+      ],
+      "createdBy": "mm4Fighter",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Bodyweight condition workout for MMA at home or when travelling. Similar concept to HIIT.",
+      "likes": 1,
+      "comments": 1,
+      "tags": ["mma", "HIIT", "interval"],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "MMA home workout"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcd",
+      "logs": 1,
+      "slug": "core-one-robtf9",
+      "excercises": [
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Twisting crunch",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Dish tuck",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 20,
+          "title": "Superman",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        }
+      ],
+      "createdBy": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "General floor core workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Core one"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabce",
+      "logs": 0,
+      "slug": "core-two-robtf9",
+      "excercises": [
+        {
+          "rest": 60,
+          "reps": 50,
+          "title": "Leg paddles",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Extreme plank",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Iron cross",
+          "timed": false,
+          "sets": 3,
+          "double": false
+        }
+      ],
+      "createdBy": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "General floor core workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Core two"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcf",
+      "logs": 1,
+      "excercises": [
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Overhead press",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Lateral raise",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Bicep curls",
+          "timed": false,
+          "sets": 1,
+          "double": false
+        }
+      ],
+      "createdBy": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Dumbbell arm workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Arms"
+    },
+    {
+      "id": "mH6GcK7mP1PMHlMlabcf",
+      "logs": 0,
+      "excercises": [
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Triceps extension",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 0,
+          "reps": 10,
+          "title": "Wrist curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        },
+        {
+          "rest": 60,
+          "reps": 10,
+          "title": "Hammer curl",
+          "timed": false,
+          "sets": 1,
+          "double": true
+        }
+      ],
+      "createdBy": "robtf9",
+      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
+      "description": "Dumbbell arm workout.",
+      "likes": 0,
+      "comments": 0,
+      "tags": [],
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "title": "Arms two"
+    }
+  ]
+}
