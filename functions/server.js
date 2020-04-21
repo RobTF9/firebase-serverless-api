@@ -1,7 +1,7 @@
 const firebase = require("firebase");
 const firebaseConfig = require("./utils/config");
 const cors = require("cors");
-const workoutRouter = require("./resources/workout/workout.router");
+const workoutRouter = require("./resources/workouts/workout.router");
 const likeRouter = require("./resources/likes/like.router");
 const { signin, signup, protect } = require("./utils/auth");
 const app = require("express")();
@@ -20,6 +20,7 @@ app.use((err, req, res, next) => {
     console.error(err);
     res.json(err.message);
   } else {
+    console.log(res);
     res.end();
   }
 });
