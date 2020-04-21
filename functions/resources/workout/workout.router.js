@@ -7,15 +7,16 @@ const {
   removeOne,
 } = require("./workout.controllers");
 const { workoutModel } = require("./workout.model");
+const { tagModel } = require("../tags/tag.model");
 
 // /api/workouts
 
-workoutRouter.route("/").get(getMany).post(workoutModel, createOne);
+workoutRouter.route("/").get(getMany).post(workoutModel, tagModel, createOne);
 
 workoutRouter
   .route("/:id")
   .get(getOne)
-  .put(workoutModel, updateOne)
+  .put(workoutModel, tagModel, updateOne)
   .delete(removeOne);
 
 module.exports = workoutRouter;

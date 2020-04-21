@@ -22,7 +22,7 @@ module.exports = functions
           return null;
         }
       })
-      .catch((error) => {
-        console.error(error);
+      .catch((err) => {
+        console.error(err);
       });
   });
