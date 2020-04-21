@@ -7,6 +7,7 @@ const comments = db.collection("comments");
 const users = db.collection("users");
 const likes = db.collection("likes");
 const notifications = db.collection("notifications");
+const tags = db.collection("tags");
 
 module.exports = {
   db,
@@ -15,4 +16,5 @@ module.exports = {
   users,
   likes,
   notifications,
+  tags,
 };
