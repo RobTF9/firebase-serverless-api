@@ -2,51 +2,45 @@
   "comments": [
     {
       "id": "8pjrcNqluqDx2S7Q8lpT",
-      "username": "robtf9",
+      "createdBy": "robtf9",
       "createdAt": "2020-03-29T16:17:39.051Z",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "workoutId": "mH6GcK7mP1PMHlMlokMe",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
     },
     {
       "id": "9tW1HHNWgL83IOKRRuNP",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "workoutId": "RXvNdzLPvzyIgnVLyKqZ",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "username": "robtf9",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "createdBy": "robtf9",
       "createdAt": "2020-03-29T16:17:09.765Z"
     },
     {
       "id": "moTGQXaVitZ2h5auopAt",
       "workoutId": "i5XNZr4v6Y7HBbP9nRSq",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "username": "robtf9",
-      "createdAt": "2020-03-29T16:17:29.700Z",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "createdBy": "robtf9",
+      "createdAt": "2020-03-29T16:17:29.700Z"
     },
     {
       "id": "o4RdIFgmgfihhaErnFL3",
       "workoutId": "Y2qPlJBbJ8ZqRUlJHSh0",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "username": "robtf9",
-      "createdAt": "2020-03-29T16:17:21.088Z",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "createdBy": "robtf9",
+      "createdAt": "2020-03-29T16:17:21.088Z"
     },
     {
       "id": "rFZUWgpOfAoCPyY38kp2",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "workoutId": "sMaZVgHDYvVj7jEqJGLR",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "username": "robtf9",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "createdBy": "robtf9",
       "createdAt": "2020-03-29T16:17:47.559Z"
     },
     {
       "id": "s34cNLTLOlMg17xawReA",
       "createdAt": "2020-03-29T16:17:00.926Z",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "workoutId": "15hvHN4w2KXcWIR5fe1w",
-      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "username": "robtf9"
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "createdBy": "robtf9"
     }
   ],
   "likes": [
@@ -275,7 +269,6 @@
     {
       "id": "i5XNZr4v6Y7HBbP9nRSq",
       "createdBy": "theChief",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "A free weight routing focused on pushing muscles.",
       "likes": 1,
       "comments": 1,
@@ -377,13 +370,11 @@
         }
       ],
       "createdBy": "athlete30",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Simple bodyweight circuit for stripping fat."
     },
     {
       "id": "RXvNdzLPvzyIgnVLyKqZ",
       "createdBy": "Y0ungP",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "A HIIT style workout to get the whole body pumped, especially the glutes.",
       "likes": 1,
       "comments": 1,
@@ -469,7 +460,6 @@
     {
       "id": "Y2qPlJBbJ8ZqRUlJHSh0",
       "createdBy": "VojoOwner",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Running intervals, run fast for one minute then jog to rest.",
       "likes": 1,
       "comments": 1,
@@ -554,16 +544,13 @@
           "title": "Expand and contract"
         }
       ],
-      "slug": "finger-resistance-excercise-RiseTrainer",
       "createdBy": "RiseTrainer",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Excerices to be conducted in rice bucket, useful for building up finger strength and resistance for rock climbing.",
       "likes": 1
     },
     {
       "id": "mH6GcK7mP1PMHlMlokMe",
       "logs": 0,
-      "slug": "mma-home-workout-mm4Fighter",
       "excercises": [
         {
           "rest": 30,
@@ -626,7 +613,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabcd",
       "logs": 1,
-      "slug": "core-one-robtf9",
       "excercises": [
         {
           "rest": 60,
@@ -654,7 +640,6 @@
         }
       ],
       "createdBy": "robtf9",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "General floor core workout.",
       "likes": 0,
       "comments": 0,
@@ -665,7 +650,6 @@
     {
       "id": "mH6GcK7mP1PMHlMlabce",
       "logs": 0,
-      "slug": "core-two-robtf9",
       "excercises": [
         {
           "rest": 60,
@@ -693,7 +677,6 @@
         }
       ],
       "createdBy": "robtf9",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "General floor core workout.",
       "likes": 0,
       "comments": 0,
@@ -779,7 +762,6 @@
         }
       ],
       "createdBy": "robtf9",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Dumbbell arm workout.",
       "likes": 0,
       "comments": 0,
@@ -865,7 +847,6 @@
         }
       ],
       "createdBy": "robtf9",
-      "userImage": "https://firebasestorage.googleapis.com/v0/b/fitio-app-dev.appspot.com/o/no-image.png?alt=media",
       "description": "Dumbbell arm workout.",
       "likes": 0,
       "comments": 0,

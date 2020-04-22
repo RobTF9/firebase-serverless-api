@@ -12,3 +12,35 @@ exports.createOne = (req, res, next) =>
     .then(() => comments.add(req.body))
     .then(() => res.status(200).json(req.body))
     .catch((err) => next(new Error(err)));
+
+exports.getByUser = (req, res, next) =>
+  comments
+    .where("createdBy", "==", req.user.username)
+    .get()
+    .then((data) => {
+      let array = [];
+      data.forEach((comment) => {
+        array.push({
+          id: comment.id,
+          ...comment.data(),
+        });
+      });
+      res.status(200).json({ data: array });
+    })
+    .catch((err) => next(new Error(err)));
+
+exports.getByWorkout = (req, res, next) =>
+  comments
+    .where("workoutId", "==", req.params.id)
+    .get()
+    .then((data) => {
+      let array = [];
+      data.forEach((comment) => {
+        array.push({
+          id: comment.id,
+          ...comment.data(),
+        });
+      });
+      res.status(200).json({ data: array });
+    })
+    .catch((err) => next(new Error(err)));

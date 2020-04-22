@@ -9,22 +9,30 @@ const {
   comments,
 } = require("../seed.json");
 
-comments.forEach((comment) => {
-  db.doc(`/comments/${comment.id}`)
-    .set(comment)
+comments.forEach(({ id, workoutId, content, createdBy, createdAt }) => {
+  db.doc(`/comments/${id}`)
+    .set({
+      content,
+      workoutId,
+      createdBy,
+      createdAt,
+    })
     .then(() => {
-      console.log(`Comment ${comment.id} document written.`);
+      console.log(`Comment ${id} document written.`);
     })
     .catch((error) => {
       console.error(error);
     });
 });
 
-likes.forEach((like) => {
-  db.doc(`/likes/${like.id}`)
-    .set(like)
+likes.forEach(({ id, workoutId, username }) => {
+  db.doc(`/likes/${id}`)
+    .set({
+      workoutId,
+      username,
+    })
     .then(() => {
-      console.log(`Like ${like.id} document written.`);
+      console.log(`Like ${id} document written.`);
     })
     .catch((error) => {
       console.error(error);
@@ -64,13 +72,36 @@ users.forEach((user) => {
     });
 });
 
-workouts.forEach((workout) => {
-  db.doc(`/workouts/${workout.id}`)
-    .set(workout)
-    .then(() => {
-      console.log(`Workout ${workout.id} document written.`);
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-});
+workouts.forEach(
+  ({
+    id,
+    createdBy,
+    description,
+    likes,
+    logs,
+    comments,
+    tags,
+    createdAt,
+    title,
+    excercises,
+  }) => {
+    db.doc(`/workouts/${id}`)
+      .set({
+        createdBy,
+        description,
+        likes,
+        logs,
+        comments,
+        tags,
+        createdAt,
+        title,
+        excercises,
+      })
+      .then(() => {
+        console.log(`Workout ${id} document written.`);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+);

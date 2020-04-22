@@ -1,8 +1,24 @@
 const { db, likes } = require("../../utils/database");
 
-exports.getMany = (req, res, next) =>
+exports.getByUser = (req, res, next) =>
   likes
     .where("username", "==", req.user.username)
+    .get()
+    .then((data) => {
+      let array = [];
+      data.forEach((like) => {
+        array.push({
+          id: like.id,
+          ...like.data(),
+        });
+      });
+      res.status(200).json({ data: array });
+    })
+    .catch((err) => next(new Error(err)));
+
+exports.getByWorkout = (req, res, next) =>
+  likes
+    .where("workoutId", "==", req.params.id)
     .get()
     .then((data) => {
       let array = [];

@@ -1,9 +1,14 @@
 const likeRouter = require("express").Router();
-const { createOne, removeOne, getMany } = require("./like.controllers");
+const {
+  createOne,
+  removeOne,
+  getByUser,
+  getByWorkout,
+} = require("./like.controllers");
 
 // /api/likes
-likeRouter.route("/").get(getMany);
+likeRouter.route("/").get(getByUser);
 
-likeRouter.route("/:id").post(createOne).delete(removeOne);
+likeRouter.route("/:id").get(getByWorkout).post(createOne).delete(removeOne);
 
 module.exports = likeRouter;
