@@ -1,8 +1,5 @@
 const functions = require("firebase-functions");
 const { db } = require("../utils/database");
-const {
-  notificationModel,
-} = require("../resources/notifications/notification.model");
 
 module.exports = functions
   .region("europe-west1")
@@ -13,16 +10,14 @@ module.exports = functions
       .get()
       .then((doc) => {
         if (doc.exists && doc.data().username !== snapshot.data().username) {
-          return db
-            .doc(`/notifications/${snapshot.id}`)
-            .set(
-              notificationModel(
-                doc.data().createdBy,
-                snapshot.data().username,
-                "like",
-                doc.id
-              )
-            );
+          return db.doc(`/notifications/${snapshot.id}`).set({
+            createdAt: new Date().toISOString(),
+            recipient: doc.data().createdBy,
+            sender: snapshot.data().username,
+            type: "like",
+            read: false,
+            workoutId: doc.id,
+          });
         } else {
           return null;
         }
