@@ -32,6 +32,32 @@ exports.createOne = (req, res, next) =>
     .then(({ id }) => res.status(200).json({ data: { id, ...req.body } }))
     .catch((err) => next(new Error(err)));
 
+exports.copyOne = (req, res, next) => {
+  let workout;
+  db.doc(`/workouts/${req.params.id}`)
+    .get()
+    .then((doc) => {
+      workout = {
+        ...doc.data(),
+        title: doc.data().title + " COPY",
+        createdBy: req.user.username,
+        createdAt: new Date().toISOString(),
+        likes: 0,
+        logs: 0,
+        comments: 0,
+      };
+      return workout;
+    })
+    .then((workout) => workouts.add(workout))
+    .then(() =>
+      res.status(200).json({
+        message: "Workout copied",
+        data: { workout },
+      })
+    )
+    .catch((err) => next(new Error(err)));
+};
+
 exports.updateOne = (req, res, next) =>
   db
     .doc(`/workouts/${req.params.id}`)
