@@ -1,0 +1,33 @@
+{
+  "name": "fitio-app-api",
+  "version": "1.0.0",
+  "description": "API for 'fitio' a voice activated workout application. <br/><br/>",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-promise": "^4.2.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "env": "firebase functions:config:get",
+    "dev": "firebase functions:config:set app.environment=\"dev\" && firebase use development",
+    "prod": "firebase functions:config:set app.environment=\"prod\" && firebase use production",
+    "predeploy": "npm run dev",
+    "deploy": "firebase deploy --only functions",
+    "postdeploy": "npm run env",
+    "preproduction": "npm run prod",
+    "production": "firebase deploy --only functions",
+    "postproduction": "npm run dev && npm run env",
+    "preseed": "firebase firestore:delete -r -y /workouts && firebase firestore:delete -r -y /users && firebase firestore:delete -r -y /tags && firebase firestore:delete -r -y /muscles && firebase firestore:delete -r -y /likes && firebase firestore:delete -r -y /comments && firebase firestore:delete -r -y /notifications",
+    "seed": "cd  functions && node ../scripts/seedDatabase.js && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RobTF9/fitio-app-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RobTF9/fitio-app-api/issues"
+  },
+  "homepage": "https://github.com/RobTF9/fitio-app-api#readme"
+}
