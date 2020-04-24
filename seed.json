@@ -854,5 +854,223 @@
       "createdAt": "2020-03-29T13:31:58.760Z",
       "title": "Arms two"
     }
+  ],
+  "schedules": [
+    {
+      "id": "sjflajglasdgare",
+      "createdBy": "robtf9",
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "active": true,
+      "type": "daily",
+      "recurring": true,
+      "workouts": [
+        "mH6GcK7mP1PMHlMlabcf",
+        "mH6GcK7mP1PMHlMlabce",
+        "mH6GcK7mP1PMHlMlabcd"
+      ]
+    },
+    {
+      "id": "sjflajglh",
+      "createdBy": "robtf9",
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "active": true,
+      "type": "weekly",
+      "recurring": true,
+      "workouts": {
+        "monday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "tuesday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "wednesday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "thursday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "friday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "saturday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ],
+        "sunday": [
+          "mH6GcK7mP1PMHlMlabcf",
+          "mH6GcK7mP1PMHlMlabce",
+          "mH6GcK7mP1PMHlMlabcd"
+        ]
+      }
+    },
+    {
+      "id": "sldfhkshfkahf",
+      "createdBy": "robtf9",
+      "createdAt": "2020-03-29T13:31:58.760Z",
+      "active": true,
+      "type": "weekly",
+      "recurring": false,
+      "workouts": {
+        "weekOne": {
+          "monday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "tuesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "wednesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "thursday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "friday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "saturday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "sunday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ]
+        },
+        "weekTwo": {
+          "monday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "tuesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "wednesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "thursday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "friday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "saturday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "sunday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ]
+        },
+        "weekThree": {
+          "monday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "tuesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "wednesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "thursday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "friday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "saturday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "sunday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ]
+        },
+        "weekFour": {
+          "monday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "tuesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "wednesday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "thursday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "friday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "saturday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ],
+          "sunday": [
+            "mH6GcK7mP1PMHlMlabcf",
+            "mH6GcK7mP1PMHlMlabce",
+            "mH6GcK7mP1PMHlMlabcd"
+          ]
+        }
+      }
+    }
   ]
 }
